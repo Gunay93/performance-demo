@@ -1,75 +1,204 @@
-# React + TypeScript + Vite
+# 🛒 React Shop App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce application built with **React, TypeScript and modern frontend technologies**.
 
-Currently, two official plugins are available:
+The project includes product listing, search, filtering, sorting, favorites, cart management, product details and API integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+🔗 https://gunay93.github.io/performance-demo/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🛍 Products
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Fetch products from API
+- Product detail page
+- Related products
+- Responsive product grid
+- Optimized rendering with virtualization
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🔎 Search & Filters
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Product search
+- Category filtering
+- Price range filtering
+- Sorting by price:
+  - Low → High
+  - High → Low
+- Clear filters functionality
 
-```
+### 🛒 Shopping Cart
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Add products to cart
+- Increase / decrease quantity
+- Remove products
+- Total price calculation
+- Cart persistence with local storage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ❤️ Favorites / Wishlist
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Add/remove favorite products
+- Favorite counter badge
+- Persistent favorites state
 
-```
+### ⚡ Performance
+
+- Virtualized product list using `react-window`
+- Memoized filtering with `useMemo`
+- Lazy loading components
+- Optimized rendering
+
+### 🌐 Data Management
+
+- Server state management with TanStack Query
+- API caching
+- Loading and error states
+
+---
+
+# 🛠 Technologies
+
+## Frontend
+
+- React
+- TypeScript
+- Vite
+- React Router
+- CSS
+
+## State Management
+
+- Zustand
+- Zustand Persist
+
+## Server State
+
+- TanStack Query (React Query)
+
+## Performance
+
+- react-window
+- React.lazy
+- Suspense
+- useMemo
+
+## API
+
+- DummyJSON API
+
+
+# 📂 Project Structure
+
+
+src
+│
+├── api
+│ └── products-api.ts
+│
+├── adapters
+│ └── product-adapter.ts
+│
+├── components
+│ ├── products
+│ ├── cart
+│ └── favorites
+│
+├── hooks
+│ ├── useProducts.ts
+│ └── useProduct.ts
+│
+├── pages
+│ ├── Home.tsx
+│ ├── CartPage.tsx
+│ ├── FavoritesPage.tsx
+│ └── ProductDetail.tsx
+│
+├── store
+│ └── cart-store.ts
+│
+├── types
+│
+└── App.tsx
+
+
+---
+
+# 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Gunay93/performance-demo.git
+
+Install dependencies:
+
+npm install
+
+Run development server:
+
+npm run dev
+
+Build production:
+
+npm run build
+🔌 API
+
+Products are fetched from:
+
+https://dummyjson.com/products
+
+API responses are transformed using an adapter layer before being used inside components.
+
+🧠 Architecture
+
+The application separates:
+
+Server State
+      |
+      ↓
+TanStack Query
+      |
+      ↓
+Components
+
+
+Client State
+      |
+      ↓
+Zustand
+      |
+      ↓
+Cart / Favorites
+
+This keeps API data and UI state separated.
+
+📱 Responsive Design
+
+The application supports:
+
+Desktop
+Tablet
+Mobile
+
+Product grid automatically adjusts according to screen size.
+
+📌 Future Improvements
+Authentication
+Checkout flow
+Payment integration
+Infinite scrolling
+Backend integration
+Admin dashboard
+👩‍💻 Author
+
+Günay Cabbarlı
+
+Frontend Developer
+
+React
+TypeScript
+Next.js
+React Native
