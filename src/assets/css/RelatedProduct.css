@@ -1,0 +1,15 @@
+.related-products {
+    margin-top: 60px;
+}
+
+.related-products h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}

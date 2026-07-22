@@ -1,0 +1,10 @@
+.no-products {
+    padding: 60px 20px;
+    text-align: center;
+    color: #666;
+}
+
+.no-products h2 {
+    margin-bottom: 10px;
+    color: #222;
+}
