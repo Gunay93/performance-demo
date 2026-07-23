@@ -83,7 +83,7 @@ export const useFavoriteStore = create<FavoriteStore>()(
 
 
         {
-            name: "favorite-storage"
+            name: "web-favorite-storage"
         }
 
     )
