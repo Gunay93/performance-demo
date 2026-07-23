@@ -175,16 +175,6 @@ Cart / Favorites
 
 This keeps API data and UI state separated.
 
-📱 Responsive Design
-
-The application supports:
-
-Desktop
-Tablet
-Mobile
-
-Product grid automatically adjusts according to screen size.
-
 📌 Future Improvements
 Authentication
 Checkout flow
@@ -192,10 +182,11 @@ Payment integration
 Infinite scrolling
 Backend integration
 Admin dashboard
+
+
 👩‍💻 Author
 
 Günay Cabbarlı
-
 Frontend Developer
 
 React

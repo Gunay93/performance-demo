@@ -1,6 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useCartStore } from "../../store/cart-store";
-import { products } from "../../data/products";
 import "../../assets/css/ProductDetail.css";
 import RelatedProducts from "./RelatedProducts";
 import { IoIosArrowRoundBack } from "react-icons/io";
@@ -8,6 +7,7 @@ import useToast from "../../hooks/useToast";
 import useProduct from "../../hooks/useProduct";
 import Loader from "../Loader";
 import { FaManatSign } from "react-icons/fa6";
+import useProducts from "../../hooks/useProducts";
 
 export default function ProductDetail() {
     const {
@@ -18,6 +18,9 @@ export default function ProductDetail() {
         isLoading,
         error
     } = useProduct(id!);
+    const {
+        data: products = []
+    } = useProducts();
     const navigate = useNavigate();
     const { success } = useToast();
     const addToCart = useCartStore(
@@ -25,9 +28,7 @@ export default function ProductDetail() {
     );
 
     if (isLoading) {
-
         return <Loader />;
-
     }
 
 
@@ -35,17 +36,10 @@ export default function ProductDetail() {
 
         return (
             <div>
-                Product not found
+                Məhsul tapılmadı
             </div>
         );
 
-    }
-    if (!product) {
-        return (
-            <h2>
-                Məhsul tapılmadı
-            </h2>
-        );
     }
 
 
