@@ -38,7 +38,7 @@ export default function Navbar() {
                 : "nav-link"
             }
           >
-            Home
+            Ana səhifə
           </NavLink>
 
 
@@ -48,7 +48,7 @@ export default function Navbar() {
               `nav-link cart-icon ${isActive ? "active" : ""}`
             }
           >
-            <FiShoppingCart />Cart
+            <FiShoppingCart />Səbət
 
             {
               cartCount > 0 && (

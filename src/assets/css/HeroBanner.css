@@ -1,10 +1,10 @@
 .hero {
-    height: 350px;
+    height: 450px;
     background-image:
-        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8");
+        url("../../assets/images/banner.jpg");
 
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     /* border-radius: 20px; */
     margin: 0 auto;
     width: 100%;
@@ -36,7 +36,6 @@
 
 
 .hero p {
-
     font-size: 18px;
     margin-bottom: 25px;
 
@@ -45,7 +44,6 @@
 
 
 .hero button {
-
     width: fit-content;
     padding: 12px 25px;
     border: none;
@@ -54,4 +52,22 @@
     cursor: pointer;
     font-size: 16px;
 
+}
+
+.scroll-arrow {
+    margin-top: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
 }
