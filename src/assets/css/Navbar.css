@@ -90,11 +90,15 @@
 
 .cart-badge {
     margin-left: 6px;
-    background: #2563eb;
+    background: #ff0000;
     color: white;
-    font-size: 12px;
-    padding: 3px 8px;
-    border-radius: 999px;
+    font-size: 9px;
+    line-height: 17px;
+    border-radius: 100%;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: -7px;
 }
 .navbar-fav{position: relative;line-height: 0;}
 .navbar-fav svg{font-size: 25px;}
